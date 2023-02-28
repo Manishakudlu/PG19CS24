@@ -1,0 +1,42 @@
+{% extends "admin/admin_index.html" %}
+{% block body %}
+<html>
+<head>
+    <style>
+        th,td{
+{#            background-color: black;#}
+            color: white;
+
+        }
+    </style>
+</head>
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-stripped" width="500" border="1">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">USERNAME</th>
+      <th scope="col">GENDER</th>
+
+      <th scope="col">ADDRESS</th>
+      <th scope="col">EMAIL</th>
+      <th scope="col">CONTACT</th>
+    </tr>
+     {% for i in a %}
+  <tr>
+    <td>{{ loop.index }}</td>
+    <td><img src="{{ i.uimage }}" height="100" width="100"><br>{{ i['uname'] }}</td>
+    <td>{{ i['ugender'] }}</td>
+       <td>{{ i['uhouse'] }},{{ i.upost }},{{ i.upin }}</td>
+    <td>{{ i['uemail']}}</td>
+    <td>{{ i['uphone']}}</td>
+  </tr>
+
+
+    {% endfor %}
+
+  </table>
+</form>
+</body>
+</html>
+{% endblock %}

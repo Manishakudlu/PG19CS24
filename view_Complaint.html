@@ -1,0 +1,46 @@
+{% extends "admin/admin_index.html" %}
+{% block body %}
+<html>
+<head>
+    <style>
+        th,td{
+{#            background-color: black;#}
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-stripped" width="500" border="1">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">USERNAME</th>
+      <th scope="col">COMPLAINT</th>
+      <th scope="col">DATE</th>
+      <th scope="col">REPLY</th>
+      <th scope="col">REPLY DATE</th>
+
+    </tr>
+     {% for i in a %}
+  <tr>
+    <td>{{ loop.index }}</td>
+    <td>{{ i['uname'] }}</td>
+       <td>{{ i['complaint'] }}</td>
+    <td>{{ i['date']}}</td>
+
+
+      <p>{% if i['reply']=='pending' %}
+          <td colspan="2" align="center"><a href="/reply/{{ i['complaint_id'] }}#cta" class="btn btn-light">REPLY</a></td>
+         {% else %}
+          <td>{{ i['reply'] }}</td>
+          <td> {{ i['r_date'] }}</td>
+        {% endif %}
+
+  </tr>
+    {% endfor %}
+
+  </table>
+</form>
+</body>
+</html>
+{% endblock %}
