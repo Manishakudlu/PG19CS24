@@ -1,0 +1,464 @@
+{#{% extends "user/user_index.html" %}#}
+{#{% block body %}#}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<style>
+    th{
+        text-decoration-color: white;
+
+    }
+</style>
+
+<body bgcolor="white"><form action="/prediction1" method="post">  <table class="table table-stripped" width="500" border="1" style="background-color: white;">
+
+  <tr>
+    <th scope="row">Acedamic percentage in Operating Systems</th>
+    <td><label for="textfield"></label>
+      <input type="text" name="textfield" id="textfield" class="form-control" required /></td>
+  </tr>
+  <tr>
+    <th scope="row">percentage in Algorithms</th>
+    <td><label for="textfield2"></label>
+      <input type="text" name="textfield2" id="textfield2" class="form-control" required /></td>
+  </tr>
+  <tr>
+    <th scope="row">Percentage in Programming Concepts</th>
+    <td><label for="textfield3"></label>
+      <input type="text" name="textfield3" id="textfield3" class="form-control" required/></td>
+  </tr>
+  <tr>
+    <th scope="row">Percentage in Software Engineering</th>
+    <td><label for="textfield4"></label>
+      <input type="text" name="textfield4" id="textfield4"class="form-control" required /></td>
+  </tr>
+  <tr>
+    <th scope="row">Percentage in Computer Networks</th>
+    <td><label for="textfield5"></label>
+      <input type="text" name="textfield5" id="textfield5" class="form-control" required/></td>
+  </tr>
+  <tr>
+    <th scope="row">Percentage in Electronics Subjects</th>
+    <td><label for="textfield6"></label>
+      <input type="text" name="textfield6" id="textfield6" class="form-control" required/></td>
+  </tr>
+  <tr>
+    <th scope="row">Percentage in Computer Architecture</th>
+    <td><label for="textfield7"></label>
+      <input type="text" name="textfield7" id="textfield7" class="form-control" required/></td>
+  </tr>
+  <tr>
+    <th scope="row">Percentage in Mathematics</th>
+    <td><label for="textfield8"></label>
+      <input type="text" name="textfield8" id="textfield8" class="form-control" required/></td>
+  </tr>
+  <tr>
+    <th scope="row">Percentage in Communication skills</th>
+    <td><label for="textfield9"></label>
+      <input type="text" name="textfield9" id="textfield9" class="form-control" required/></td>
+  </tr>
+  <tr>
+    <th scope="row">Hours working per day</th>
+    <td><label for="textfield13"></label>
+      <input type="text" name="textfield13" id="textfield13" class="form-control" required/></td>
+  </tr>
+  <tr>
+    <th scope="row">hackathons</th>
+    <td><label for="textfield12"></label>
+      <input type="text" name="textfield12" id="textfield12" class="form-control" required /></td>
+  </tr>
+  <tr>
+    <th scope="row">coding skills rating</th>
+    <td><label for="textfield11"></label>
+      <input type="text" name="textfield11" id="textfield11" class="form-control" required/></td>
+  </tr>
+  <tr>
+    <th scope="row">public speaking points</th>
+    <td><label for="textfield10"></label>
+      <input type="text" name="textfield10" id="textfield10" class="form-control" required/></td>
+  </tr>
+  <tr>
+    <th scope="row">can work long time before system?</th>
+    <td><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup14" value="1" id="RadioGroup14_0" checked/>
+          Yes</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup14" value="0" id="RadioGroup14_1" />
+          No</label></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <th scope="row">self-learning capability?</th>
+    <td><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup13" value="1" id="RadioGroup13_0" checked/>
+          Yes</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup13" value="0" id="RadioGroup13_1" />
+          No</label></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <th scope="row">talenttests taken?</th>
+    <td><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup12" value="1" id="RadioGroup12_0" checked/>
+          Yes</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup12" value="0" id="RadioGroup12_1" />
+          No</label></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <th scope="row">olympiads</th>
+    <td><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup11" value="1" id="RadioGroup11_0" checked/>
+          Yes</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup11" value="0" id="RadioGroup11_1" />
+          No</label></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <th scope="row">reading and writing skills</th>
+    <td><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup10" value="0" id="RadioGroup10_0" checked/>
+          Excellent</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup10" value="1" id="RadioGroup10_1" />
+          Medium</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup10" value="2" id="RadioGroup10_2" />
+          poor</label></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <th scope="row">memory capability score</th>
+    <td><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup9" value="0" id="RadioGroup9_0" checked/>
+          Excellent</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup9" value="1" id="RadioGroup9_1" />
+          Medium</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup9" value="2" id="RadioGroup9_2" />
+          Poor</label></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <th scope="row">interested career area </th>
+    <td><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup15" value="0" id="RadioGroup15_0" checked/>
+          System Developer</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup15" value="1" id="RadioGroup15_1" />
+          Business Process Analyst</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup15" value="2" id="RadioGroup15_2" />
+          Developers</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup15" value="3" id="RadioGroup15_3" />
+          Testing</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup15" value="4" id="RadioGroup15_4" />
+          Security</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup15" value="5" id="RadioGroup15_5" />
+          Cloud computing</label></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <th scope="row">Job/Higher Studies?</th>
+    <td><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup8" value="0" id="RadioGroup8_0" checked/>
+          job</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup8" value="1" id="RadioGroup8_1" />
+          higherstudies</label></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <th scope="row">Type of company want to settle in?</th>
+    <td><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup7" value="0" id="RadioGroup7_0" checked/>
+          web service</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup7" value="1" id="RadioGroup7_1" />
+          SAas service</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup7" value="2" id="RadioGroup7_2" />
+          sales & marketing</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup7" value="3" id="RadioGroup7_3" />
+          Testing and Maintainance Services</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup7" value="4" id="RadioGroup7_4" />
+          product development</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup7" value="5" id="RadioGroup7_5" />
+          BPA</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup7" value="6" id="RadioGroup7_6" />
+          sevice based</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup7" value="7" id="RadioGroup7_7" />
+          cloud services</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup7" value="8" id="RadioGroup7_8" />
+          Finance</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup7" value="9" id="RadioGroup7_9" />
+          product based</label></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <th scope="row">Salary Range Expected</th>
+    <td><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup6" value="0" id="RadioGroup6_0" checked/>
+          salary</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup6" value="1" id="RadioGroup6_1" />
+          work</label></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <th scope="row">Management or Technical</th>
+    <td><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup5" value="0" id="RadioGroup5_0" checked/>
+          Management</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup5" value="1" id="RadioGroup5_1" />
+          Technical</label></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <th scope="row">Salary/work</th>
+    <td><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup4" value="0" id="RadioGroup4_0" checked/>
+          salary</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup4" value="1" id="RadioGroup4_1" />
+          work</label></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <th scope="row">hard/smart worker</th>
+    <td><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup3" value="0" id="RadioGroup3_0" checked />
+          Hard work</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup3" value="1" id="RadioGroup3_1" />
+          Smart work</label></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <th scope="row">worked in teams ever?</th>
+    <td><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup2" value="1" id="RadioGroup2_0" checked/>
+          Yes</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup2" value="0" id="RadioGroup2_1" />
+          No</label></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <th scope="row">Introvert</th>
+    <td><table width="200">
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup1" value="1" id="RadioGroup1_0" checked/>
+          Yes</label></td>
+      </tr>
+      <tr>
+        <td><label>
+          <input type="radio" name="RadioGroup1" value="1" id="RadioGroup1_1" />
+          No</label></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td colspan="2" scope="row" align="center"><input type="submit" name="button" id="button" value="PREDICT" class="btn btn-primary" /></td>
+    </tr>
+</table>
+
+
+
+{#    {% if data %}#}
+{#      {% if data==0 %}#}
+{#            <center><h3><font color="red">Your Career Job is Database Developer </font></h3></center>#}
+{#        {% elif data==1 %}#}
+{#           <center> <h3><font color="red">Your Career Job is Portal Administrator </font></h3></center>#}
+{#        {% elif data==2 %}#}
+{#           <center> <h3><font color="red">Your Career Job is System security Administrator </font></h3></center>#}
+{#     {% elif data==3 %}#}
+{#            <center><h3><font color="red">Your Career Job is Business System Analyst </font></h3></center>#}
+{#     {% elif data==4 %}#}
+{#            <center><h3><font color="red">Your Career Job is Software System Engineer </font></h3></center>#}
+{#     {% elif data==5 %}#}
+{#            <center><h3><font color="red">Your Career Job is  Business intelligence analyst</font></h3></center>#}
+{#     {% elif data==6 %}#}
+{#           <center> <h3><font color="red">Your Career Job is CRM technical developer </font></h3></center>#}
+{#     {% elif data==7 %}#}
+{#            <center><h3><font color="red">Your Career Job is Mobile Applcation developer </font></h3></center>#}
+{#     {% elif data==8 %}#}
+{#            <center><h3><font color="red">Your Career Job is UX Designer </font></h3></center>#}
+{#     {% elif data==9 %}#}
+{#          <center>  <h3><font color="red">Your Career Job is  Quality Assurance associate</font></h3></center>#}
+{#     {% elif data==10 %}#}
+{#           <center> <h3><font color="red">Your Career Job is Web developer </font></h3></center>#}
+{#     {% elif data==11 %}#}
+{#            <center><h3><font color="red">Your Career Job is Information Security Analyst </font></h3></center>#}
+{#     {% elif data==12 %}#}
+{#           <center> <h3><font color="red">Your Career Job is Technical support </font></h3></center>#}
+{#     {% elif data==13 %}#}
+{#            <h3><font color="red">Your Career Job is  CRM business analyst</font></h3>#}
+{#     {% elif data==14 %}#}
+{#           <center> <h3><font color="red">Your Career Job is Project Manager </font></h3></center>#}
+{#     {% elif data==15 %}#}
+{#            <center><h3><font color="red">Your Career Job is Information technology manager  </font></h3></center>#}
+{#     {% elif data==16 %}#}
+{#            <center><h3><font color="red">Your Career Job is Programmer analyst </font></h3></center>#}
+{#     {% elif data==17 %}#}
+{#           <center> <h3><font color="red">Your Career Job is Design and UX </font></h3></center>#}
+{#     {% elif data==18 %}#}
+{#            <center><h3><font color="red">Your Career Job is Sollutions Architect  </font></h3></center>#}
+{#     {% elif data==19 %}#}
+{#            <center><h3><font color="red">Your Career Job is System analyst </font></h3></center>#}
+{#     {% elif data==20 %}#}
+{#            <center><h3><font color="red">Your Career Job is Network Security administrator  </font></h3></center>#}
+{#     {% elif data==21 %}#}
+{#            <center><h3><font color="red">Your Career Job is Data Architect </font></h3></center>#}
+{#     {% elif data==22 %}#}
+{#            <center><h3><font color="red">Your Career Job is Software Developer </font></h3></center>#}
+{#     {% elif data==23 %}#}
+{#            <center><h3><font color="red">Your Career Job is E-commerce analyst </font></h3></center>#}
+{#     {% elif data==24 %}#}
+{#            <center><h3><font color="red">Your Career Job is Technical Service/help desk/Tech support </font></h3></center>#}
+{#     {% elif data==25 %}#}
+{#            <center><h3><font color="red">Your Career Job is Information Technology auditor </font></h3></center>#}
+{#     {% elif data==26 %}#}
+{#           <center> <h3><font color="red">Your Career Job is Network security Engineer </font></h3></center>#}
+{#     {% elif data==27 %}#}
+{#            <center><h3><font color="red">Your Career Job is Database Manager </font></h3></center>#}
+{#     {% elif data==28 %}#}
+{#            <center><h3><font color="red">Your Career Job is Application Developer </font></h3></center>#}
+{#     {% elif data==29 %}#}
+{#            <center><h3><font color="red">Your Career Job is Network engineer </font></h3></center>#}
+{#     {% elif data==30 %}#}
+{#            <center><h3><font color="red">Your Career Job is Technical Engineer </font></h3></center>#}
+{#     {% elif data==31 %}#}
+{#           <center> <h3><font color="red">Your Career Job is Software quality assurance(QA)/Testing </font></h3></center>#}
+{#    {% else %}#}
+{#          <center> <h3><font color="red">Your Career Job is Database Administrator </font></h3></center>#}
+{#     {% endif %}#}
+{#{% endif %}#}
+
+    {% if data %}
+        <h3 align="center"><font color="red">Your Career Job is <b>{{ data }}</b> </font></h3>
+    {% endif %}
+
+
+</form>
+</body>
+</html>
+{#{% endblock %}#}
