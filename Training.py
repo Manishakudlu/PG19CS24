@@ -33,20 +33,31 @@ def load_dataset():
     print("S", acc_sv)
 
     #
-    nb = GaussianNB()
-    # nb.fit(X_train, y_train)
-    nb.fit(attributes1, labels1)
-    y_pred_nb = nb.predict(X_test)
-    acc = accuracy_score(y_test, y_pred_nb)
-    acc_nb = round(acc * 100, 2)
-    print("N", acc_nb)
+
+    dummy = DummyClassifier()
+    # svm.fit(X_train,y_train)
+    dummy.fit(attributes1, labels1)
+    y_pred_dummy = dummy.predict(X_test)
+    acc = accuracy_score(y_test, y_pred_dummy)
+    acc_dy = round(acc * 100, 2)
+    print("d", acc_dy)
+
+    #
+
+    ridg = RidgeClassifier()
+    # svm.fit(X_train,y_train)
+    ridg.fit(attributes1, labels1)
+    y_pred_ridg = ridg.predict(X_test)
+    acc = accuracy_score(y_test, y_pred_ridg)
+    acc_rg = round(acc * 100, 2)
+    print("R", acc_rg)
 
     import os
     import numpy as np
     import matplotlib.pyplot as plt
 
-    x = ["Random Forest", "SVM", "Naive Bayes"]
-    y = [acc_rf, acc_sv, acc_nb]
+    x = ["Random Forest", "SVM", "DummyClassifier", "RidgeClassifier"]
+    y = [acc_rf, acc_sv, acc_dy, acc_rg]
     # plt.bar(x, y)
     fig, ax=plt.subplots()
     bar1=ax.bar(x, y)
