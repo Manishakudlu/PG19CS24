@@ -1,0 +1,53 @@
+{% extends 'career_expert/career_index.html' %}
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="get">
+    <table class="table table-stripped" width="500" border="1">
+        <tr>
+        <th><font color="white">NAME</font></th>
+        <td><input type="text" class="form-control" value="{{ data.name }}" readonly ></td>
+        </tr>
+          <tr>
+        <th><font color="white">IMAGE</font></th>
+        <td><img src="{{ data.image }}" height="100" width="100"/></td>
+        </tr>
+          <tr>
+        <th><font color="white">QUALIFICATION</font></th>
+        <td><input type="text" class="form-control" value="{{ data.qualification }}" readonly ></td>
+        </tr>
+          <tr>
+        <th><font color="white">HOUSE</font></th>
+        <td><input type="text" class="form-control" value="{{ data.house }}" readonly ></td>
+        </tr>
+          <tr>
+        <th><font color="white">PLACE</font></th>
+        <td><input type="text" class="form-control" value="{{ data.place }}" readonly ></td>
+        </tr>
+          <tr>
+        <th><font color="white">POST</font></th>
+        <td><input type="text" class="form-control" value="{{ data.post }}" readonly ></td>
+        </tr>
+          <tr>
+        <th><font color="white">PIN</font></th>
+        <td><input type="text" class="form-control" value="{{ data.pin }}" readonly ></td>
+        </tr>
+          <tr>
+        <th><font color="white">CONTACT</font></th>
+        <td><input type="text" class="form-control" value="{{ data.phone }}" readonly ></td>
+        </tr>
+        <tr>
+        <th><font color="white">EMAIL</th>
+        <td><input type="text" class="form-control" value="{{ data.email }}" readonly ></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
+{% endblock %}

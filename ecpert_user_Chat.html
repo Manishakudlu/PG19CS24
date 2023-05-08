@@ -1,0 +1,111 @@
+{% extends "career_expert/career_index.html" %}
+{% block body %}
+<form action="" method="post">
+<table id="t1" class="container" align="center" >
+{# <tr>#}
+{# <th class="important">Customers List</th>#}
+{# </tr>#}
+  </table>
+    <p></p>
+    <table id="t3" align="center"></table>
+    <table id="t4"  width="600" align="center" style="border-style: double;color: white;"></table><p></p>
+    <table id="t2" align="center">
+        <tr>
+            <td>
+        <input type="hidden" id="v"/></td>
+          <td><input type="hidden" id="h"/></td>
+          <td><input type="hidden" id="u" value="{{ u }}"/></td>
+        <td><input type="text" name="e" id="e" class="form-control" /></td>
+      <td><input type="button" name="chat" id="chat" value="chat" class="btn-success"/></td>
+            </tr>
+{#    </div>#}
+    </table>
+
+</form>
+
+<script type="text/javascript" src="/static/jquery.js"></script>
+<script>
+    $(document).ready(function () {
+        function abc() {
+            $.ajax({
+            url: '/chatrply',
+            type: 'post',
+            success: function (res) {
+                var rid=$("#u").val();
+                a = jQuery.parseJSON(res)
+                  b = a["status"]
+
+                    if (b == "ok") {
+
+                        s = a['data']
+                        {#alert("b is ok"+s)#}
+                        d = a['id']
+
+
+                        var len = s.length
+                        $("#t4").text("")
+                        for (i = 0; i <= len; i++) {
+                            x = s[i]
+                            {#alert("x"+x)#}
+                            s_id = x['from_id']
+                            r_id = x['to_id']
+                            msg = x['message']
+                            {#alert("msggggg"+msg)#}
+                            {# alert("sid"+s_id)#}
+                            {# alert("riddd"+r_id)#}
+
+
+                            if (d == s_id && rid == r_id) {
+                                {#alert("hiiiii")#}
+                                $("#t4").append('<tr><td align="right">' + msg + '</td> </tr>')
+
+
+                            }
+                            if (d == r_id && rid == s_id) {
+
+                                {#alert("hloooooo")#}
+                                $("#t4").append('<tr><td align="left">' + msg + '</td></tr>')
+                            }
+
+                        }
+                    }
+
+            },
+
+            error: function (err) {
+                bb = jQuery.parseJSON(err)
+                {#alert("error")#}
+
+            }
+        });
+
+        }
+        aa=setInterval(abc,1000)
+    });
+
+$("#chat").click(function () {
+    var k = $("#h").val()
+{#    alert(k)#}
+    var d = $("#e").val()
+{#    alert(d)#}
+    $.ajax({
+        url: '/chatsnd/{{ u }}',
+        type: 'POST',
+        data: {n: k, m: d},
+        success: function (res) {
+
+            a = jQuery.parseJSON(res)
+            result = a["status"]
+{#            alert(result)#}
+        },
+        error: function (err) {
+            bb = jQuery.parseJSON(err)
+{#            alert("error")#}
+
+        }
+
+    });
+$("#e").val("")
+});
+    </script>
+{% endblock %}

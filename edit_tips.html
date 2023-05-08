@@ -1,0 +1,30 @@
+{% extends 'career_expert/career_index.html' %}
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/update_tips1/{{ t }}" method="post">
+  <table class="table table-stripped" width="500" border="1">
+        <tr>
+          <th>
+                <font color="white">TITLE</font>
+            </th>
+            <td><input type="text" name="t" class="form-control" value="{{ data.title }}" required></td>
+        </tr>
+        <tr>
+             <th><font color="white">CONTENT</font></th>
+            <td><textarea cols="45" rows="5" name="c" class="form-control" required>{{ data.content }}</textarea> </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><input type="submit" class="btn btn-light" value="UPDATE"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
+{% endblock %}

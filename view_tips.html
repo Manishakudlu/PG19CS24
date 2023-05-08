@@ -1,0 +1,42 @@
+{% extends 'career_expert/career_index.html' %}
+{% block body %}
+<html>
+<head>
+    <style>
+        th,td{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-stripped" width="500" border="1">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">DATE</th>
+      <th scope="col">TITLE</th>
+
+      <th scope="col">CONTENT</th>
+      <th scope="col"></th>
+
+
+    </tr>
+     {% for i in a %}
+  <tr>
+    <td>{{ loop.index }}</td>
+    <td>{{ i['date'] }}</td>
+    <td>{{ i['title']}}</td>
+    <td>{{ i['content']}}</td>
+    <td><a href="/update_tips/{{ i.tips_id }}#cta" class="btn btn-light">EDIT</a><br><br>
+    <a href="/delete_tips/{{ i.tips_id }}" class="btn btn-light" onclick="return confirm('Are you sure to delete?')">DELETE</a> </td>
+
+
+
+  </tr>
+    {% endfor %}
+
+  </table>
+</form>
+</body>
+</html>
+{% endblock %}
