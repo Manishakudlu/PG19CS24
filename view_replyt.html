@@ -14,23 +14,25 @@
   <table class="table table-stripped" width="500" border="1">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">USERNAME</th>
-         <th scope="col">DATE</th>
-      <th scope="col">FEEDBACK</th>
-
-
+      <th scope="col">COMPLAINT</th>
+      <th scope="col">DATE</th>
+      <th scope="col">REPLY</th>
+      <th scope="col">REPLY DATE</th>
 
     </tr>
      {% for i in data %}
   <tr>
     <td>{{ loop.index }}</td>
-    <td>{{ i['uname'] }}</td>
-      <td>{{ i['date']}}</td>
-       <td>{{ i['feedback'] }}</td>
+       <td>{{ i['complaint'] }}</td>
+    <td>{{ i['date']}}</td>
 
 
-
-
+     {% if i['reply']=='pending' %}
+          <div align="center"><td colspan="2" align="center">Loading...</td></div>
+         {% else %}
+          <td>{{ i['reply'] }}</td>
+          <td> {{ i['r_date'] }}</td>
+        {% endif %}
 
   </tr>
     {% endfor %}

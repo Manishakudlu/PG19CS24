@@ -1,0 +1,124 @@
+{% extends "user/user_index.html" %}
+{% block body %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+<form method="post" action="/send_rating1">
+    <input type="hidden" name="cid" value="{{ c }}">
+
+    <div class="container">
+        <div class="rating-wrap" style="background:#aaaaaa;">
+            <div class="center">
+                <fieldset class="rating">
+                    <input type="radio" name="star" id="star5" value="5"/><label for="star5"></label>
+                    <input type="radio" name="star" id="star4" value="4" /><label for="star4"></label>
+                    <input type="radio" name="star" id="star3" value="3" /><label for="star3"></label>
+                    <input type="radio" name="star" id="star2" value="2" /><label for="star2"></label>
+                    <input type="radio" name="star" id="star1" value="1" /><label for="star1"></label>
+                </fieldset>
+            </div>
+{#            <h2 id="rating-value"></h2>#}
+            <div>
+                <input type="submit" value="SUBMIT">
+            </div>
+
+        </div>
+    </div>
+
+    </form>
+<style>
+*{
+ margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width:100%;
+    height: 100%;
+}
+
+body{
+    font-family: Arial;
+    background: #2d2d2d;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.rating-wrap{
+    max-width: 400px;
+    margin: auto;
+    padding: 15px;
+    border-color: #ff0000;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,.2);
+    text-align: center;
+}
+
+.center{
+    width:162px;
+    margin: auto;
+}
+
+#rating-value{
+    margin:40px auto 0;
+    width:110px;
+    padding: 10px 5px;
+    text-align: center;
+    box-shadow: inset 0 0 2px 1px rgba(46, 204, 113, .2);
+}
+
+.rating{
+    border: none;
+    float: left;
+}
+
+.rating input{
+    display: none;
+}
+
+.rating label{
+    color: #ddd;
+    float: right;
+    cursor: pointer;
+}
+
+.rating label:before{
+    content: '\f005';
+    font-family: fontAwesome;
+    margin: 5px;
+    font-size: 1.5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label{
+    color: #F5E308;
+{#    color: #2ce679;#}
+}
+
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label{
+    color: #2ddc76;
+}
+
+</style>
+
+
+</body>
+</html>
+{% endblock %}

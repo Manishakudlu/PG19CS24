@@ -21,7 +21,6 @@
       <th scope="col">EMAIL</th>
       <th scope="col">CONTACT</th>
       <th scope="col"></th>
-      <th scope="col"></th>
 
 
 
@@ -34,16 +33,11 @@
        <td>{{ i['house'] }},{{ i.post }},{{ i.pin }}</td>
     <td>{{ i['email']}}</td>
     <td>{{ i['phone']}}</td>
-      <td><a href="/user_apprating/{{ i.expert_id}}#cta" class="btn btn-primary ">RATING</a> </td>
+    <td><a href="/view_user_tips/{{ i.expert_id }}#cta" class="btn btn-primary ">TIPS</a> <br><br>
+        <a href="/view_user_vaccancy/{{ i.expert_id}}#cta" class="btn btn-primary ">VACCANCY</a><br><br></td>
+    <td><a href="/send_rating/{{ i.expert_id}}#cta" class="btn btn-primary ">RATING</a> <br><br>
+    <a href="/ph_user_chat/{{ i.expert_id }}#cta" class="btn btn-primary">CHAT</a> </td>
 
-      {% if i.status=='follow' %}
-              <td><a href="/send_unfollow/{{ i.login_id }}" class="btn btn-primary " onclick="return confirm('Are you sure to Unfollow?')">UNFOLLOW </a><br><br>
-
-    </td>{% else %}
-              <td><a href="/send_follow/{{ i.login_id }}" class="btn btn-primary " onclick="return confirm('Are you sure to Follow?')">FOLLOW </a><br><br>
-
-    </td>
-  {% endif %}
 
 
 

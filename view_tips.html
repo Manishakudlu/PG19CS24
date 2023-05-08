@@ -4,7 +4,6 @@
 <head>
     <style>
         th,td{
-{#            background-color: black;#}
             color: white;
         }
     </style>
@@ -14,21 +13,22 @@
   <table class="table table-stripped" width="500" border="1">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">USERNAME</th>
-         <th scope="col">DATE</th>
-      <th scope="col">FEEDBACK</th>
+      <th scope="col">DATE</th>
+      <th scope="col">TITLE</th>
 
+      <th scope="col">CONTENT</th>
+      <th scope="col"></th>
 
 
     </tr>
      {% for i in data %}
   <tr>
     <td>{{ loop.index }}</td>
-    <td>{{ i['uname'] }}</td>
-      <td>{{ i['date']}}</td>
-       <td>{{ i['feedback'] }}</td>
-
-
+    <td>{{ i['date'] }}</td>
+    <td>{{ i['title']}}</td>
+    <td>{{ i['content']}}</td>
+{#    <td><a href="/update_tips/{{ i.tips_id }}#cta" class="btn btn-light">EDIT</a><br><br>#}
+{#    <a href="/delete_tips/{{ i.tips_id }}" class="btn btn-light" onclick="return confirm('Are you sure to delete?')">DELETE</a> </td>#}
 
 
 

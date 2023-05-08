@@ -1,0 +1,21 @@
+{% extends "user/user_index.html" %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/send_complaint1">
+  <table width="500" border="" class="table table-stripped">
+    <tr>
+      <td><font color="white">Complaint</font></td>
+      <td>
+      <textarea name="textarea" required class="form-control" id="textarea" cols="45" rows="5" required></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2"><div align="center">
+        <input type="submit" name="button"  class="btn btn-light" id="button" value="SEND" />
+      </div></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
+{% endblock %}

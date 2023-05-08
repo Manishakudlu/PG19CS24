@@ -1,0 +1,41 @@
+{% extends "user/user_index.html" %}
+{% block body %}
+    <html>
+    <head>
+    <style>
+        th,td{
+{#            background-color: black;#}
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-bordered">
+    <tr>
+      <th>#</th>
+      <th>Rating</th>
+      <th align="center">User Name</th>
+      <th>Date</th>
+    </tr>
+      {% for i in range(0,ln) %}
+    <tr>
+      <td>&nbsp;{{ loop.index }}</td>
+      <td >
+                <img src="{{ r1[i][0] }}" width="20" height="20">
+                <img src="{{ r1[i][1] }}" width="20" height="20">
+                <img src="{{ r1[i][2] }}" width="20" height="20">
+                <img src="{{ r1[i][3] }}" width="20" height="20">
+                <img src="{{ r1[i][4] }}" width="20" height="20">
+            </td>
+
+{#      <td align="center"><img src="{{ resu[i][3] }}" height="100" width="100"><br>{{ resu[i][2] }}</td>#}
+      <td>{{ resu[i]['uname'] }}<img src="{{ resu[i]['uimage'] }}" height="100" width="100"></td>
+      <td>{{ resu[i]['date'] }}</td>
+    </tr>
+       {% endfor %}
+  </table>
+</form>
+    </body>
+    </html>
+{% endblock %}

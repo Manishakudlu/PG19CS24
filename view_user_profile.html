@@ -1,0 +1,54 @@
+{% extends "user/user_index.html" %}
+{% block body %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="get">
+  <table width="500" border="" class="table table-stripped">
+        <tr>
+        <th><font color="white"> NAME</font></th>
+        <td><input type="text" class="form-control" value="{{ data.uname }}" readonly ></td>
+        </tr>
+          <tr>
+        <th><font color="white">IMAGE</font></th>
+        <td><img src="{{ data.uimage }}" height="100" width="100"/></td>
+        </tr>
+          <tr>
+        <th><font color="white">GENDER</font></th>
+        <td><input type="text" class="form-control" value="{{ data.ugender }}" readonly ></td>
+        </tr>
+          <tr>
+        <th><font color="white">HOUSE</font></th>
+        <td><input type="text" class="form-control" value="{{ data.uhouse }}" readonly ></td>
+        </tr>
+          <tr>
+        <th><font color="white">PLACE</font></th>
+        <td><input type="text" class="form-control" value="{{ data.uplace }}" readonly ></td>
+        </tr>
+          <tr>
+        <th><font color="white">POST</font></th>
+        <td><input type="text" class="form-control" value="{{ data.upost }}" readonly ></td>
+        </tr>
+          <tr>
+        <th><font color="white">PIN</font></th>
+        <td><input type="text" class="form-control" value="{{ data.upin }}" readonly ></td>
+        </tr>
+          <tr>
+        <th><font color="white">CONTACT</font></th>
+        <td><input type="text" class="form-control" value="{{ data.uphone }}" readonly ></td>
+        </tr>
+        <tr>
+        <th><font color="white">EMAIL</font></th>
+        <td><input type="text" class="form-control" value="{{ data.uemail }}" readonly ></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
+{% endblock %}
